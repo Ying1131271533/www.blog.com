@@ -1,0 +1,35 @@
+
+/* 修改底部搜索类型下拉layui样式 */
+.layui-form-item{
+    margin-bottom: 0px;
+}
+.layui-form-item input {
+    /*border-radius: 20px 0 0 20px;*/
+    height: 35px;
+    /*border: 1px solid #ff7600;*/
+    /*border-right:none;*/
+    border: 0px;
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #fff;
+    color: #ff7600;
+}
+
+.layui-form-select dl dd:hover{
+    background-color: #d2d2d2;
+}
+
+.layui-form-select dl dd {
+    text-align: left;
+}
+
+/* iconfont */
+.icon{font-size: 22px;}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}

@@ -1,0 +1,228 @@
+/*!
+ * WeUI v2.5.4 (https://github.com/weui/weui)
+ * Copyright 2021 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+body {
+    --weui-BTN-DISABLED-FONT-COLOR: rgba(0, 0, 0, .2)
+}
+
+body[data-weui-theme=dark] {
+    --weui-BTN-DISABLED-FONT-COLOR: hsla(0, 0%, 100%, .2)
+}
+
+@media (prefers-color-scheme:dark) {
+    body:not([data-weui-theme=light]) {
+        --weui-BTN-DISABLED-FONT-COLOR: hsla(0, 0%, 100%, .2)
+    }
+}
+
+body {
+    --weui-BTN-DEFAULT-BG: #f2f2f2
+}
+
+body[data-weui-theme=dark] {
+    --weui-BTN-DEFAULT-BG: hsla(0, 0%, 100%, .08)
+}
+
+@media (prefers-color-scheme:dark) {
+    body:not([data-weui-theme=light]) {
+        --weui-BTN-DEFAULT-BG: hsla(0, 0%, 100%, .08)
+    }
+}
+
+body {
+    --weui-BTN-DEFAULT-COLOR: #06ae56
+}
+
+body[data-weui-theme=dark] {
+    --weui-BTN-DEFAULT-COLOR: hsla(0, 0%, 100%, .8)
+}
+
+@media (prefers-color-scheme:dark) {
+    body:not([data-weui-theme=light]) {
+        --weui-BTN-DEFAULT-COLOR: hsla(0, 0%, 100%, .8)
+    }
+}
+
+body {
+    --weui-BTN-DEFAULT-ACTIVE-BG: #e6e6e6
+}
+
+body[data-weui-theme=dark] {
+    --weui-BTN-DEFAULT-ACTIVE-BG: hsla(0, 0%, 100%, .126)
+}
+
+@media (prefers-color-scheme:dark) {
+    body:not([data-weui-theme=light]) {
+        --weui-BTN-DEFAULT-ACTIVE-BG: hsla(0, 0%, 100%, .126)
+    }
+}
+
+body {
+    --weui-BTN-ACTIVE-MASK: rgba(0, 0, 0, .1)
+}
+
+body[data-weui-theme=dark] {
+    --weui-BTN-ACTIVE-MASK: hsla(0, 0%, 100%, .05)
+}
+
+@media (prefers-color-scheme:dark) {
+    body:not([data-weui-theme=light]) {
+        --weui-BTN-ACTIVE-MASK: hsla(0, 0%, 100%, .05)
+    }
+}
+
+body[data-weui-mode=care] {
+    --weui-BTN-DEFAULT-COLOR: #018942
+}
+
+body[data-weui-mode=care][data-weui-theme=dark] {
+    --weui-BTN-DEFAULT-COLOR: hsla(0, 0%, 100%, .8)
+}
+
+@media (prefers-color-scheme:dark) {
+    body[data-weui-mode=care]:not([data-weui-theme=light]) {
+        --weui-BTN-DEFAULT-COLOR: hsla(0, 0%, 100%, .8)
+    }
+}
+
+body {
+    --weui-DIALOG-LINE-COLOR: rgba(0, 0, 0, .1)
+}
+
+body[data-weui-theme=dark] {
+    --weui-DIALOG-LINE-COLOR: hsla(0, 0%, 100%, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body:not([data-weui-theme=light]) {
+        --weui-DIALOG-LINE-COLOR: hsla(0, 0%, 100%, .1)
+    }
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    line-height: 1.6;
+    font-family: -apple-system-font, Helvetica Neue, sans-serif
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0
+}
+
+a img {
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+input,
+textarea {
+    caret-color: #ff7a0d;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, .3);
+    color: var(--weui-FG-2)
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, .3);
+    color: var(--weui-FG-2)
+}
+
+body {
+    --weui-BG-0: #ededed;
+    --weui-BG-1: #f7f7f7;
+    --weui-BG-2: #fff;
+    --weui-BG-3: #f7f7f7;
+    --weui-BG-4: #4c4c4c;
+    --weui-BG-5: #fff;
+    --weui-FG-0: rgba(0, 0, 0, .9);
+    --weui-FG-HALF: rgba(0, 0, 0, .9);
+    --weui-FG-1: rgba(0, 0, 0, .5);
+    --weui-FG-2: rgba(0, 0, 0, .3);
+    --weui-FG-3: rgba(0, 0, 0, .1);
+    --weui-FG-4: rgba(0, 0, 0, .15);
+    --weui-RED: #fa5151;
+    --weui-ORANGE: #fa9d3b;
+    --weui-YELLOW: #ffc300;
+    --weui-GREEN: #91d300;
+    --weui-LIGHTGREEN: #95ec69;
+    --weui-BRAND: #07c160;
+    --weui-BLUE: #10aeff;
+    --weui-INDIGO: #1485ee;
+    --weui-PURPLE: #6467f0;
+    --weui-WHITE: #fff;
+    --weui-LINK: #576b95;
+    --weui-TEXTGREEN: #06ae56;
+    --weui-FG: #000;
+    --weui-BG: #fff;
+    --weui-TAG-TEXT-ORANGE: #fa9d3b;
+    --weui-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, .1);
+    --weui-TAG-TEXT-GREEN: #06ae56;
+    --weui-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, .1);
+    --weui-TAG-TEXT-BLUE: #10aeff;
+    --weui-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, .1);
+    --weui-TAG-TEXT-BLACK: rgba(0, 0, 0, .5);
+    --weui-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, .05)
+}
+.weui-toptips {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.common-ad-bg {
+    background: #fbfbfb;
+}
+
+.justify-center {
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+}
+
+.justify-space {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
