@@ -32,6 +32,11 @@
                 <li><a class="color-555"> {{ $blog->title }} </a></li>
             </ol>
             <div class="article-detail clearfix">
+                @if (auth()->id() == $blog->user_id)
+                <div class="text-right">
+                    <a href="{{ route('blog.edit', $blog) }}" class="btn btn-primary btn-sm">编辑</a>
+                </div>
+                @endif
                 <h1>{{ $blog->title }}</h1>
                 <input type="hidden" id="user_id" name="user_id" value="{{ auth()->id() }}">
                 <input type="hidden" id="blog_id" name="blog_id" value="{{ $blog->id }}">

@@ -8,8 +8,9 @@
                 <li>
                     <div>
                         <a href="{{ route('index') }}" style="background-color: none">
-                            <img src="/static/images/logo.png" class="menu_logo" alt="草帽跨境">
-                            <img src="/static/images/top_2.png" class="menu_logo_right_abc" alt="草帽跨境">
+                            <img src="/static/images/huiro.png" class="menu_logo" style="width:85px;" alt="博客">
+                            {{-- <img src="/static/images/logo.png" class="menu_logo" alt="草帽跨境"> --}}
+                            {{-- <img src="/static/images/top_2.png" class="menu_logo_right_abc" alt="草帽跨境"> --}}
                         </a>
                     </div>
                 </li>

@@ -53,18 +53,37 @@ class BlogController extends Controller
     // public function show(Blog $blog)
     public function show($id)
     {
-
         // 获取博客的所有评论
-        // $comments = $blog->comments()->with('user')->get()->keyBy('id')->toArray();
         $blog = Blog::with(['comments.user' => function($query){
             $query->orderBy('id', 'asc');
         }])->find($id);
+
         // 浏览量加一时，停止时间戳维护
         $blog->timestamps = false;
         $blog->increment('view');
         // 启动时间戳维护
         $blog->timestamps = true;
+
+        // 返回
         return view('blog.show', ['blog' => $blog, 'comments' => $blog->comments->keyBy('id')]);
+
+        /************************ 使用缓存 ************************/
+
+        // // 获取博客
+        // $blog = Blog::findBlogById($id);
+        // // 获取博客的所有评论，评论以id为key
+        // $comments = $blog->comments()->with('user')->orderBy('id', 'asc')->get()->keyBy('id');
+        // // 浏览量加一时，停止时间戳维护
+        // $blog->timestamps = false;
+        // // 暂时分配模型事件
+        // $blog->withoutEvents(function() use ($blog){
+        //     $blog->increment('view');
+        // });
+        // // 启动时间戳维护
+        // $blog->timestamps = true;
+
+        // // 返回
+        // return view('blog.show', ['blog' => $blog, 'comments' => $comments]);
     }
 
     /**
@@ -102,7 +121,24 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        $result = $blog->with('comments')->delete();
+        // 开启事务
+        // DB::beginTransaction();
+        // try {
+        //     // 删除博客
+        //     $blog->delete();
+        //     // 删除博客的相关的评论
+        //     $blog->comments()->delete();
+        //     // 提交事务
+        //     DB::commit();
+        //     return response()->api('删除成功！');
+        // } catch (\Exception $e) {
+        //     // 回滚事务
+        //     DB::rollBack();
+        //     return response()->api($e->getMessage(), $e->getCode());
+        // }
+
+        // 使用模型事件，删除博客时，自动删除相关评论
+        $result = $blog->delete();
         if(!$result) return response()->api('删除失败', 400);
         return response()->api('删除成功！');
     }

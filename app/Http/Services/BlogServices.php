@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\Blog;
+use Illuminate\Support\Facades\Cache;
 
 class BlogServices
 {

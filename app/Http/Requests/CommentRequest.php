@@ -44,9 +44,8 @@ class CommentRequest extends FormRequest
             'content'   => [
                 'required',
                 'max:255',
-                Rule::unique('comments')
-                ->where('user_id', auth()->id())
-                ->where('blog_id', $this->blog_id), // 用户是否发布过相同的评论内容
+                // 用户是否发布过相同的评论内容
+                // Rule::unique('comments')->where('user_id', auth()->id())->where('blog_id', $this->blog_id),
             ],
         ];
     }

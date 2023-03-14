@@ -64,8 +64,7 @@
                                         </td>
                                         <td>
                                             <a class="layui-btn layui-btn-sm" href="{{ route('blog.edit', $blog) }}">编辑</a>
-                                            <a class="layui-btn layui-btn-sm del-blog" href="javascript:;"
-                                                data-url="{{ route('blog.destroy', $blog) }}">删除</a>
+                                            <a class="layui-btn layui-btn-sm del-blog" href="javascript:;" data-url="{{ route('blog.destroy', $blog) }}">删除</a>
                                         </td>
                                     </tr>
                                 @endforeach
