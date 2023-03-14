@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
+        // Schema::defaultStringLength(191);
 
         // 将分页默认视图修改为bootstrap
         // Paginator::useBootstrapFive();
