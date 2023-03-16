@@ -17,6 +17,6 @@ class TestController extends Controller
     public function __invoke(Request $request)
     {
         // 阿卡丽
-        return '神织知更031';
+        return '神织知更041';
     }
 }
