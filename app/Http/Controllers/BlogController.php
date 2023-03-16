@@ -41,7 +41,7 @@ class BlogController extends Controller
         $validated = $request->validated();
         $result = BlogServices::saveBlog($validated);
         if(!$result) return back()->withErrors('发布失败！')->withInput();
-        return back()->with('message', '发布成功！');
+        return back()->with('success', '发布成功！');
     }
 
     /**
