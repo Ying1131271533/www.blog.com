@@ -44,7 +44,7 @@
     </div>
 </footer>
 <footer class="footer_copyright">
-    <div class="container">Copyright ©2022 神织知更电子商务有限公司版权所有 &nbsp;&nbsp;
+    <div class="container">Copyright ©2022 神织知更个人网站所有 &nbsp;&nbsp;
         <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">粤ICP备202200xxxx号</a>
     </div>
 </footer>
