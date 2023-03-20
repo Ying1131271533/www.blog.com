@@ -21,6 +21,7 @@ return new class extends Migration
             $table->mediumText('content')->comment('内容');
             $table->tinyInteger('status')->default(1)->comment('状态：0 未发布 1 已发布');
             $table->timestamps();
+            $table->softDeletes();
 
             // 用户id外键
             $table->foreign('user_id')
