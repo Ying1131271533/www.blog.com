@@ -111,7 +111,7 @@
                     <div class="tuijian_div">
                         <div class="tuijian_content_div">
                             <div class="tuijian_img"><a href="/">
-                            <img src="/static/images/45334sd5g.jpg"></a></div>
+                            <img src="/static/images/20230320093538.jpg"></a></div>
                             <div class="tuijian_title tuijian-bg2">
                                 <a class="title-text ellipsis-2"  href="/">02</a>
                             </div>
