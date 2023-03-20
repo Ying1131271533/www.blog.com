@@ -14,6 +14,9 @@
                         </a>
                     </div>
                 </li>
+                <li class="items select_li_padding" style="font-size:30px">
+                    <span style>个人博客</span>
+                </li>
                 <!-- <li class="items select_li_padding"> -->
                 <li class="sousuoItem" style="display:flex;flex-direction:column;">
 
