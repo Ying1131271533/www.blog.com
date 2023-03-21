@@ -29,8 +29,8 @@ class AppServiceProvider extends ServiceProvider
         // Schema::defaultStringLength(191);
 
         // 将分页默认视图修改为bootstrap
-        // Paginator::useBootstrapFive();
-        Paginator::useBootstrapFour();
+        Paginator::useBootstrapFour(); // Bootstrap4
+        // Paginator::useBootstrapFive(); // Bootstrap5
         Paginator::defaultView('vendor.pagination.my-page');
         Paginator::defaultSimpleView('vendor.pagination.my-page');
     }
