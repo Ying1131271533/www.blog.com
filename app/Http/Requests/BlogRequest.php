@@ -49,7 +49,7 @@ class BlogRequest extends FormRequest
     protected function scene()
     {
         // 获取路由名称
-        $routeName = Route::current()->action['as'];
+        $routeName = $this->route()->action['as'];
         switch ($routeName) {
             case 'blog.store':
                 return [
