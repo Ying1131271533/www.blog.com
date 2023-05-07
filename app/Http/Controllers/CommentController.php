@@ -37,7 +37,7 @@ class CommentController extends Controller
         $comment = $blog->comments()->create($validated);
 
         // 使用自定义的队列发送邮件
-        // CommentEmail::dispatch($comment);
+        CommentEmail::dispatch($comment);
 
         // 使用Laravel自带的邮件队列
         Mail::to($blog->user)->queue(new BlogComment($comment));
