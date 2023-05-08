@@ -39,7 +39,6 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class, // 表单验证
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\EnableCrossRequestMiddleware::class, // 跨域
         ],
 
         'api' => [
@@ -70,6 +69,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         // 自定义
         'blog' => \App\Http\Middleware\BLog::class,
+        'cross.domain' => \App\Http\Middleware\EnableCrossRequestMiddleware::class, // 允许那些网站跨域
     ];
 
     /**

@@ -21,7 +21,7 @@ class EnableCrossRequestMiddleware
         // dd($origin);
         // 允许访问
         $allow_origin = [
-            'http://www.wse.com',
+            'http://api.akali.ltd',
             'http://www.ying.com',
             'http://api.ying.com',
         ];
