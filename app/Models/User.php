@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
@@ -73,5 +74,56 @@ class User extends Authenticatable
     public function blogs()
     {
         return $this->hasMany(Blog::class);
+    }
+
+
+
+
+    /********************* ElasticSearch *********************/
+
+    use Searchable;
+
+    /**
+     * 指定索引
+     * @return string
+     */
+    // public function searchableAs()
+    // {
+    //     return 'users';
+    // }
+
+    /**
+     * 获取模型的可索引数据。
+     *
+     * @return array<string, mixed>
+     */
+    public function toSearchableArray(): array
+    {
+        // $array = $this->toArray();
+
+        $array = [
+            'name' => $this->name,
+            'email' => $this->email,
+        ];
+
+        return $array;
+    }
+
+    /**
+     * 指定 搜索索引中存储的唯一ID
+     * @return mixed
+     */
+    public function getScoutKey()
+    {
+        return $this->id;
+    }
+
+    /**
+     * 指定 搜索索引中存储的唯一ID的键名
+     * @return string
+     */
+    public function getScoutKeyName()
+    {
+        return 'id';
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\BlogRequest;
 use App\Http\Services\BlogServices;
 use App\Models\Blog;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Js;
 
 class BlogController extends Controller

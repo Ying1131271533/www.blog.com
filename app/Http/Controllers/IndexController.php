@@ -3,16 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Input\Input;
 
 class IndexController extends Controller
 {
+
     /**
      * 博客首页
      */
     public function index(Request $request)
     {
+        // $blogs = Blog::search()->where('user_id', 2)->get();
+        // $blogs = Blog::search('title:(阿卡丽)')
+        // ->query(fn (Builder $query) => $query->with('user'))
+        // ->raw(); // 获取原始搜索结果
+        // ->get()->toArray();
+        // dd($blogs);
+
         // 搜索关键词
         $keyword = $request->query('keyword');
         // 分类id
